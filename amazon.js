@@ -98,21 +98,4 @@ const game = () => {
       result.style.fontSize = "2rem";
       result.innerText = "You Lost The Game";
       result.style.color = "red";
-    } else {
-      result.style.fontSize = "2rem";
-      result.innerText = "Tie";
-      result.style.color = "grey";
-    }
-    reloadBtn.innerText = "Restart";
-    reloadBtn.style.display = "flex";
-    reloadBtn.addEventListener("click", () => {
-      window.location.reload();
-    });
-  };
-
-  // Calling playGame function inside game
-  playGame();
-};
-
-// Calling the game function
-game();
+    
