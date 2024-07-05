@@ -1,12 +1,12 @@
-function randonNumber() {
-  const number = Math.random();
-  let choice;
-  if (number >= 0 && number < 1 / 3) {
-    choice = "Rock";
-  } else if (number >= 1 / 3 && number < 2 / 3) {
-    choice = "Paper";
+function GameRps() {
+  const randomNumber = Math.random();
+  let computerMove;
+  if (randomNumber >= 0 && randomNumber < 1 / 3) {
+    computerMove = "Rock";
+  } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+    computerMove = "Paper";
   } else {
-    choice = "Scissors";
+    computerMove = "Scissors";
   }
-  console.log(choice);
+  console.log(computerMove);
 }
