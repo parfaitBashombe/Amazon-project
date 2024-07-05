@@ -18,4 +18,5 @@ function gameRps() {
   } else {
     result = "You win";
   }
+  console.log(`You picker rock and the computer ${computerMove}. ${result}`);
 }
