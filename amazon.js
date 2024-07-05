@@ -1,12 +1,21 @@
-function GameRps() {
+function gameRps() {
   const randomNumber = Math.random();
   let computerMove;
   if (randomNumber >= 0 && randomNumber < 1 / 3) {
-    computerMove = "Rock";
+    computerMove = "rock";
   } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-    computerMove = "Paper";
+    computerMove = "paper";
   } else {
-    computerMove = "Scissors";
+    computerMove = "scissors";
   }
   console.log(computerMove);
+
+  let result;
+  if (computerMove === "rock") {
+    result = "tie";
+  } else if (computerMove === "paper") {
+    result = "You lose";
+  } else {
+    result = "You win";
+  }
 }
