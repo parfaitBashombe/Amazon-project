@@ -1,4 +1,7 @@
 function gameRps() {
+  const rock = document.getElementById("rock");
+  const paper = document.getElementById("paper");
+  const scissors = document.getElementById("scissors");
   const randomNumber = Math.random();
   let computerMove;
   if (randomNumber >= 0 && randomNumber < 1 / 3) {
