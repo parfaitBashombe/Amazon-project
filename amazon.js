@@ -1,10 +1,3 @@
-const rock = document.getElementById("rock");
-rock.addEventListener("click", gameRps("rock"));
-const paper = document.getElementById("paper");
-rock.addEventListener("click", gameRps("paper"));
-const scissors = document.getElementById("scissors");
-rock.addEventListener("click", gameRps("scissors"));
-
 function gameRps(playerMove) {
   const randomNumber = Math.random();
   let computerMove;
@@ -15,7 +8,6 @@ function gameRps(playerMove) {
   } else {
     computerMove = "scissors";
   }
-  console.log(computerMove);
 
   let result;
   if (computerMove === "rock" && playerMove === "rock") {
@@ -26,7 +18,7 @@ function gameRps(playerMove) {
     result = "You win";
   } else if (computerMove === "rock" && playerMove === "paper") {
     result = "You win";
-  } else if (computerMove === "paper" && playerMove === "paer") {
+  } else if (computerMove === "paper" && playerMove === "paper") {
     result = "tie";
   } else if (computerMove === "scissors" && playerMove === "paper") {
     result = "You lose";
