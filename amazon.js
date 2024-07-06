@@ -1,7 +1,11 @@
-let playerMove = "rock";
 const rock = document.getElementById("rock");
-rock.addEventListener("click", gameRps);
-function gameRps() {
+rock.addEventListener("click", gameRps("rock"));
+const paper = document.getElementById("paper");
+rock.addEventListener("click", gameRps("paper"));
+const scissors = document.getElementById("scissors");
+rock.addEventListener("click", gameRps("scissors"));
+
+function gameRps(playerMove) {
   const randomNumber = Math.random();
   let computerMove;
   if (randomNumber >= 0 && randomNumber < 1 / 3) {
@@ -34,6 +38,6 @@ function gameRps() {
     result = "tie";
   }
   console.log(
-    `You picker ${playerMove} and the computer ${computerMove}. ${result}`
+    `You picked ${playerMove} and the computer ${computerMove}. ${result}`
   );
 }
