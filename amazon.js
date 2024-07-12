@@ -13,18 +13,24 @@ function gameRps(playerMove) {
 
   if (computerMove === playerMove) {
     result = "tie";
-  } else if (computerMove === "paper" && playerMove === "rock") {
-    result = "You lose";
-  } else if (computerMove === "scissors" && playerMove === "rock") {
-    result = "You win";
-  } else if (computerMove === "rock" && playerMove === "paper") {
-    result = "You win";
-  } else if (computerMove === "scissors" && playerMove === "paper") {
-    result = "You lose";
-  } else if (computerMove === "rock" && playerMove === "scissors") {
-    result = "You lose";
-  } else if (computerMove === "paper" && playerMove === "scissors") {
-    result = "You win";
+  } else if (playerMove === "rock") {
+    if (computerMove === "paper") {
+      result = "You lose";
+    } else {
+      result = "You win";
+    }
+  } else if (playerMove === "paper") {
+    if (computerMove === "rock") {
+      result = "You win";
+    } else {
+      result = "You lose";
+    }
+  } else if (playerMove === "scissors") {
+    if (computerMove === "rock") {
+      result = "You lose";
+    } else {
+      result = "You win";
+    }
   }
   result = `You picked ${playerMove} and the computer ${computerMove} : ${result}`;
   document.getElementById("result").innerHTML = result;
