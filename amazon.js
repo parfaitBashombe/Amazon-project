@@ -32,6 +32,6 @@ function gameRps(playerMove) {
       result = "Player win";
     }
   }
-  result = `Player - ${playerMove} and CPU - ${computerMove} \n: ${result}`;
+  result = `Player - ${playerMove} and CPU - ${computerMove}: ${result}`;
   document.getElementById("result").innerHTML = result;
 }
