@@ -1,9 +1,9 @@
 function gameRps(playerMove) {
-  const randomNumber = Math.random();
+  const randomNumber = Math.floor(Math.random() * 3 + 1);
   let computerMove;
-  if (randomNumber >= 0 && randomNumber < 1 / 3) {
+  if (randomNumber === 1) {
     computerMove = "rock";
-  } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+  } else if (randomNumber === 2) {
     computerMove = "paper";
   } else {
     computerMove = "scissors";
@@ -32,6 +32,6 @@ function gameRps(playerMove) {
       result = "Player win";
     }
   }
-  result = `Player - ${playerMove} and CPU - ${computerMove} : ${result}`;
+  result = `Player - ${playerMove} and CPU - ${computerMove} \n: ${result}`;
   document.getElementById("result").innerHTML = result;
 }
